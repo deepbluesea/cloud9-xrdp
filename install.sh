@@ -27,17 +27,17 @@ sudo ldconfig
 #/usr/local/sbin/guacd -b 127.0.0.1 -f
 
 # install tomcat
-rm -rf apache-tomcat-8.0.23*
-wget http://apache.xl-mirror.nl/tomcat/tomcat-8/v8.0.23/bin/apache-tomcat-8.0.23.tar.gz
-tar xvfz apache-tomcat-8.0.23.tar.gz
-rm apache-tomcat-8.0.23.tar.gz
-cd apache-tomcat-8.0.23/webapps
-wget http://downloads.sourceforge.net/project/guacamole/current/binary/guacamole-0.9.7.war
-mv guacamole-0.9.7.war guacamole.war
+rm -rf apache-tomcat-8.0.33*
+wget http://apache.xl-mirror.nl/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8.0.33.tar.gz
+tar xvfz apache-tomcat-8.0.33.tar.gz
+rm apache-tomcat-8.0.33.tar.gz
+cd apache-tomcat-8.0.33/webapps
+wget http://downloads.sourceforge.net/project/guacamole/current/binary/guacamole-0.9.8.war
+mv guacamole-0.9.8.war guacamole.war
 
 mkdir -p ~/.guacamole
 cd ~/.guacamole
 ln -s ../workspace/guacamole.properties .
 ln -s ../workspace/user-mapping.xml .
 
-/home/ubuntu/workspace/apache-tomcat-8.0.23/bin/catalina.sh run
+/home/ubuntu/workspace/apache-tomcat-8.0.33/bin/catalina.sh run
